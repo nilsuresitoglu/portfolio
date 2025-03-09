@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/phone-logo.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <img
+            src="images/phone-logo.png"
+            alt="Phone Logo"
+            class="logo-image"
+          />
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hakkimda.html">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="kitty-overlay" id="kittyOverlay">
+      <div class="hello-kitty large" id="largeKitty">
+        <img
+          src="images/hello-kitty-strawberry.png"
+          alt="Hello Kitty"
+          class="kitty-image"
+        />
+      </div>
+    </div>
+
+    <div class="background-kitty"></div>
+
+    <main class="about-page">
+      <div class="container">
+        <div class="sections-grid">
+          <section id="about">
+            <div class="about-content">
+              <h2>About Me</h2>
+              <p class="about-text">
+                I have 2 years of freelance & full-time experience as a
+                Front-end Developer. I am an expert in HTML, CSS, JavaScript and
+                modern web technologies. I develop responsive and modern
+                websites, keeping the user experience at the forefront.
+              </p>
+            </div>
+          </section>
+
+          <section id="education">
+            <div class="education-content">
+              <h2>Education</h2>
+              <div class="education-card">
+                <h3>Yıldız Technical University</h3>
+                <p>Bachelor of Engineering</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="contact-form">
+            <form action="https://formspree.io/f/myzegroy" method="POST">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright">© Copyright by Nilsu, 2025</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const overlay = document.getElementById("kittyOverlay");
+        const largeKitty = document.getElementById("largeKitty");
+
+        // Sayfa yüklendiğinde scroll'u devre dışı bırak
+        document.body.style.overflow = "hidden";
+
+        largeKitty.addEventListener("click", function () {
+          largeKitty.classList.add("hide");
+          overlay.classList.add("hide-overlay");
+
+          // Animasyon bittikten sonra overlay'i kaldır ve scroll'u etkinleştir
+          setTimeout(() => {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>

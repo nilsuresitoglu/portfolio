@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nilsu Resitoglu | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/phone-logo.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <img
+            src="images/phone-logo.png"
+            alt="Phone Logo"
+            class="logo-image"
+          />
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hakkimda.html">About Me</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="kitty-overlay" id="kittyOverlay">
+      <div class="hello-kitty large" id="largeKitty">
+        <img
+          src="images/hello-kitty-strawberry.png"
+          alt="Hello Kitty"
+          class="kitty-image"
+        />
+      </div>
+    </div>
+
+    <div class="background-kitty"></div>
+
+    <main class="home-page">
+      <div class="container">
+        <div class="profile-section">
+          <div class="profile-container">
+            <img
+              src="images/profile-photo.jpg"
+              alt="Profil Fotoğrafı"
+              class="profile-image"
+            />
+            <h3 class="profile-name">Nilsu Resitoglu</h3>
+          </div>
+          <div class="profile-info">
+            <div class="typing-container">
+              <h1 class="typing-text">Frontend Developer</h1>
+            </div>
+            <div class="skills">
+              <h2>Skillset</h2>
+              <div class="skill-tags">
+                <div class="skill-item">
+                  <img
+                    src="images/html5-logo.png"
+                    alt="HTML5"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="images/css3-logo.png"
+                    alt="CSS3"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="images/javascript-logo.png"
+                    alt="JavaScript"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="images/typescript-logo.png"
+                    alt="TypeScript"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="images/react-logo.png"
+                    alt="React"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img
+                    src="images/figma-logo.png"
+                    alt="Figma"
+                    class="skill-logo"
+                  />
+                </div>
+                <div class="skill-item">
+                  <img src="images/aws-logo.png" alt="AWS" class="skill-logo" />
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://github.com/nilsuresitoglu"
+                target="_blank"
+                class="social-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/nilsuresitoglu/"
+                target="_blank"
+                class="social-btn"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="copyright">© Copyright by Nilsu, 2025</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const overlay = document.getElementById("kittyOverlay");
+        const largeKitty = document.getElementById("largeKitty");
+
+        // Sayfa yüklendiğinde scroll'u devre dışı bırak
+        document.body.style.overflow = "hidden";
+
+        largeKitty.addEventListener("click", function () {
+          largeKitty.classList.add("hide");
+          overlay.classList.add("hide-overlay");
+
+          // Animasyon bittikten sonra overlay'i kaldır ve scroll'u etkinleştir
+          setTimeout(() => {
+            overlay.style.display = "none";
+            document.body.style.overflow = "auto";
+          }, 1000);
+        });
+      });
+    </script>
+  </body>
+</html>
