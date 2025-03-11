@@ -1,3 +1,3 @@
 # portfolio
 My new portfolio :)
-nilsuresitoglu.com
+https://www.nilsuresitoglu.com/
